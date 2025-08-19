@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Functions</title>
+</head>
+<body>
+
+	<p id="count">0</p>
+	<button onclick="add()">Add</button>
+	<button onclick="temp()">Reset</button>
+	 <script>
+		 
+		 function fun1(...a)
+		 {
+			 for(var i of a)
+			 console.log(i+' ');
+			 console.log(`arg: ${arguments[0]}`);
+			}
+			
+			fun1(1,2,3);
+			fun1("tufail",true,23,2.4);
+			
+			var a;
+			//console.log(`${a(2)}`);//error as arrow funs not hoisted
+			a = a=>a*a;
+			console.log(`3*3= ${a(3)}`);
+			
+		let para = document.getElementById('count');
+       let temp = function(){
+		let count =0;
+		return function(){para.textContent = ++count;}
+	   }
+       const add = temp();
+
+
+	 </script>
+</body>
+</html>

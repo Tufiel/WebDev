@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Promisis</title>
+</head>
+<body>
+	<script>
+		let p = new Promise(
+			function(res,rej){
+				console.log(`Hi`);
+				res(2);
+				rej(new Error("reject called"));
+			}
+		);
+
+		// p.then(val=>console.log(`then(fun) Resolved with value: ${val}`));//Code after resove
+
+		// p.catch(val=>console.log(`catch(fun) Rejected with value: ${val}`));
+
+		// p.then(null,val=>console.log(`then(null,fun) Rejected with value: ${val}`));
+
+		// p.then(val=>console.log(`then(fun,fun) Resolved with value: ${val}`),
+		// val=>console.log(`then(fun,fun) Rejected with value: ${val}`));
+
+		// async function fun(){return "hello"};// same as return Promise.resolve('hello')
+		// fun().then((val)=>console.log(`val is ${val}`));
+
+		
+	</script>
+</body>
+</html>

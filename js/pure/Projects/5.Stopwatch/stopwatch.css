@@ -1,0 +1,90 @@
+@font-face{
+	font-family:'digital-clock-font';
+	src: url('./digital-7.italic.ttf');
+   }
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#back{
+	position: fixed;
+	top: -10%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.Main{
+	position:fixed;
+	top: 10%;
+	left: -10%;
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#clock{
+	border: 1px solid;
+	box-shadow: 1px 1px 10px black,inset 5px 5px 10px black;
+	background-color: #070707;
+	padding: 50px;
+	border-radius: 15px;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+
+.Main div div{
+    width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.Main button{
+	padding: 5px;
+	font-weight: bolder;
+	font-size: larger;
+	margin-top: 10px;
+}
+
+#display h1
+{
+	color: orange;
+	font-family: 'digital-clock-font','Orbitron', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 5rem;
+	width: 100%;
+}
+
+.hidden{
+	display: none;
+}
+
+@media (width<450px)
+{
+	#back{
+		position: fixed;
+		top: -29.5%;
+		left: -140%;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	.Main{
+		position:fixed;
+		top: -10%;
+		left: 0%;
+	}
+}
+
+
+
+
+

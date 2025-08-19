@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Objects</title>
+</head>
+<body>
+	<p id="stage">
+
+	</p>
+	<script>
+       const stage = document.getElementById('stage');
+
+	   function student(name,roll,age){
+
+		this.name = name;
+		this.roll = roll;
+		this.age = age;
+		this.getDetails = function(){
+			if( this.name != undefined && this.roll != undefined && this.age != undefined )
+			stage.textContent = `My name is ${this.name} my roll number is ${this.roll} and my age is ${this.age}`;
+			else
+			stage.textContent = "Please set details first!";
+		}
+		this.putDetails = function(name,roll,age){
+			this.name = name==undefined?this.name:name;
+			this.roll = roll==undefined?this.roll:roll;
+			this.age = age==undefined?this.age:age;
+		}
+		
+	   }
+
+	   var obj2 = {
+		name : null,
+		roll : null,
+		age : null,
+		set setName(name){
+			this.name = name==undefined?this.name:name;
+		},
+		set setRoll(roll){
+			this.roll = roll==undefined?this.roll:roll;
+		},set setAge(age){
+			this.age = age==undefined?this.age:age;
+		},
+		get getDetails()
+		{
+			if( this.name != null && this.roll != null && this.age != null )
+			stage.textContent = `My name is ${this.name} my roll number is ${this.roll} and my age is ${this.age}`;
+			else
+			stage.textContent = "Please set details first!";
+		}
+		
+	   }
+
+	   var obj1 = new student();
+	   obj1.putDetails("Tufail","20DCS054",22);
+	   obj1.getDetails();
+	   obj2.setAge = 22;
+	   obj2.roll = '20DCS054';
+	   obj2.name = 'Tufail';
+	   obj2.getDetails;
+
+	   obj1 = {
+		 printName: function(para1,para2){
+			
+		console.log(`My name is: ${this.name} ok para1: ${para1}
+		 para2:${para2}`);
+		 return "My name is "+this.name;
+		 //here this refers to calling object
+		}
+		
+	}
+	  // obj1.printName;//can't print name as there is no member name;
+        
+	   obj2 = {name:"Tufail"}
+	   var obj3 = {name:"Zahid"}
+
+	//    obj1.printName.call(obj2,"this is apply","and para are sperated by comma");
+	//    obj1.printName.call(obj3);
+
+	//    obj1.printName.apply(obj2,["this is apply","para's are passed as array"])
+
+	  obj1.printName.bind(obj2);
+	  obj2.printName;
+
+	  const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+console.log(person.fullName.bind(member)); 
+	   
+	</script>
+</body>
+</html>

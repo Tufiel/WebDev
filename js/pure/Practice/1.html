@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Practice</title>
+	<link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <h1>Beginner Questions</h1>
+
+	<h2>Sum of two Numbers</h2>
+	<input type="number" class="sum">
+	<input type="number" class="sum">
+	<button onclick="sum()">Sum</button>
+	<span class="sum"></span>
+	<br><br>
+
+	<h2>Odd or Even Number</h2>
+	<input type="number" class="oddEven">
+	<button onclick="oddEven()">Check</button>
+	<span class="oddEven"></span>
+	<br><br>
+
+	<h2>Reverse Array</h2>
+	<input type="number" placeholder="Enter a long number" class="reverse">
+	<button onclick="reverse()">Reverse</button>
+	<span class="reverse"></span>
+	<br><br>
+
+	<h2>Generate random Number</h2>
+	 <input type="number" placeholder="Max" class="rand"> <br><br>
+	<button onclick="randGenerate()">Generate</button>
+	<span class="rand"></span>
+	<br><br>
+
+	<h2>Largest number in array</h2>
+	<input type="text" placeholder="2424,234,34" class="largestNumber">
+	<button onclick="largestNumber()">Find</button>
+	<span class="largestNumber"></span>
+	<br><br>
+
+	<h2>Fibonacci Series</h2>
+	<input type="number" placeholder="Enter n" class="fibonacciNumber">
+	<button onclick="fibonacciNumber()">Find</button>
+	<span class="fibonacciNumber"></span>
+	<br><br>
+
+	<h2>Celsius to Farenheit</h2>
+	<input type="number" placeholder="Celsius" class="convertTemp">
+	<button onclick="convertTemp()">Find</button>
+	<span class="convertTemp"></span>
+	<br><br>
+
+	<h2>Number of Vowels</h2>
+	<textarea rows="5" cols="50" placeholder="Enter a string" class="vowels"></textarea>
+	<button onclick="findVowels()">Find</button>
+	<br><span class="vowels"></span>
+	<br><br>
+
+	<h2>Check Palindrome</h2>
+	<textarea rows="5" cols="50" placeholder="Enter a string" class="palindrome"></textarea>
+	<button onclick="checkPalindrome()">check</button>
+	<br><span class="palindrome"></span>
+	<br><br>
+
+	<h2>Factorial</h2>
+	<input type="number" placeholder="Enter n" class="factorial">
+	<button onclick="findFactorial()">Find</button>
+	<span class="factorial"></span>
+	<br><br><br>
+
+	<h1>Intermediate Questions</h1>
+
+	<h2>Sort array in ascending order</h2>
+	<input type="text" placeholder="2424,234,34" class="sort">
+	<button onclick="sort()">Find</button>
+	<span class="sort"></span>
+	<br><br>
+
+	<h2>Remove duplicates in array</h2>
+	<input type="text" placeholder="2424,234,34" class="duplicate">
+	<button onclick="duplicate()">Find</button>
+	<span class="duplicate"></span>
+	<br><br>
+
+	<h2>Check anagram(case sensetive)</h2>
+	<input type="text" placeholder="string1" class="anagram">
+	<input type="text" placeholder="string2" class="anagram">
+	<button onclick="anagram()">Find</button>
+	<span class="anagram"></span>
+	<br><br>
+
+	<h2>Intersection of two array's</h2>
+	<input type="text" placeholder="2424,234,34" class="intersection">
+	<input type="text" placeholder="2424,234,34" class="intersection">
+	<button onclick="intersection()">Find</button>
+	<span class="intersection"></span>
+	<br><br>
+
+	<h2>Longest common string</h2>
+	<textarea rows="5" cols="50" placeholder="Enter string1" class="commonString"></textarea>
+	<textarea rows="5" cols="50" placeholder="Enter string2" class="commonString"></textarea>
+	<button onclick="commonString()">Find</button>
+	<br><span class="commonString"></span>
+	<br><br>
+
+	<h2>Decimal to binary,octal,hexa decimal</h2>
+	<input type="number" class="decimalConversion">
+	<select  class="decimalConversion">
+		<option value="2">Binary</option>
+		<option value="8">Octal</option>
+		<option value="16">Hexa Deciaml</option>
+	</select>
+	<button onclick="decimalConversion()">Find</button>
+	<span class="decimalConversion"></span>
+	<br><br>
+
+	<h2>Second smallest element in array</h2>
+	<input type="text" placeholder="2424,234,34" class="secondSmallest">
+	<button onclick="secondSmallest()">Find</button>
+	<span class="secondSmallest"></span>
+	<br><br>
+
+	<h2>Leap Year</h2>
+	<input type="number" class="leapYear">
+	<button onclick="leapYear()">Check</button>
+	<span class="leapYear"></span>
+	<br><br>
+
+	<h2>Email validation</h2>
+	<input type="text"  class="validateEmail">
+	<button onclick="validateEmail()">Check</button>
+	<span class="validateEmail"></span>
+	<br><br>
+
+	<h2>Shuffle element in array randomly</h2>
+	<input type="text" placeholder="2424,234,34" class="shuffleElements">
+	<button onclick="shuffleElements()">Find</button>
+	<span class="shuffleElements"></span>
+	<br><br>
+
+	<h1>Advanced Questions</h1>
+
+	<h2>Stack</h2> <br><br>
+     <div class="stackContainer">
+		<div class="elementsContainer bucket1 buckets">
+
+		</div>
+
+		<div class="deletedContainer bucket2 buckets">
+			
+		</div>
+	 </div>
+	<br><br>
+	<input type="color"  class="stack">
+	<input type="text" placeholder="Enter Text" class="stack">
+	<button onclick="myStack('push')">push</button>
+	<button onclick="myStack('pop')">pop</button>
+	<button onclick="myStack('size')">size</button>
+	<button onclick="myStack('peek')">peek</button>
+	<button onclick="myStack('print')">print</button>
+	<br><br>
+	<span class="stack"></span>
+	<br><br>
+	
+	<h2>Binary Search</h2>
+	<input type="text" placeholder="1,2,3,4" class="binarySearch">
+	<input type="number" placeholder="Number to search" class="binarySearch">
+	<button onclick="binarySearch()">check</button>
+	<span class="binarySearch"></span>
+	<br><br>
+
+	<h2>Most frequent element</h2>
+	<input type="text" placeholder="11,2,13,4" class="frequentElement">
+	<button onclick="frequentElement()">check</button>
+	<span class="frequentElement"></span>
+	<br><br>
+
+	<h2>Prime Number</h2>
+	<input type="number"  class="primeNumber">
+	<button onclick="primeNumber()">Check</button>
+	<span class="primeNumber"></span>
+	<br><br>
+	
+	<br><br><br><br>
+	<script src="1.js"></script>
+</body>
+</html>

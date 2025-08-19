@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dom</title>
+</head>
+<body>
+	<input type="text" id="inputTag" placeholder="Name:">
+	<button onclick="fun()">Change</button>
+
+	<p id="date"></p>
+
+	<script>
+		setInterval(updateDate,1000);
+		function updateDate()
+		{
+			document.getElementById('date').innerHTML = Date() ;
+		}
+		let fun = (function()
+		{
+			let e = document.getElementById('inputTag');
+			let count=0;
+			return ()=>{
+              if(count%2===0)
+			    {
+					e.placeholder = "Name";
+					e.type = "text";
+					
+				}
+				else
+				{
+					e.placeholder = "Number";
+					e.type = "number";
+				}
+				count++;
+				
+			}
+		})();
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>W3s js</title>
+</head>
+<body>
+	<h1>This is js w3s practice</h1>
+	  <script>
+
+        document.write('hello ');
+		let x =12;
+		var y =12;
+		document.write(x+' '+y+' ');//12 12
+        {
+			let x = 10;
+			var y =10;
+			document.write(x+' '+y+' ');//10 10
+		}
+		document.write(x+' '+y);//12 10
+		 
+		const a = x;
+		document.write(' '+a+' ');//12
+		x =13;
+		document.write(' '+a+' ');//12
+		x= [1,2,3];
+		const b = x;
+		document.write(' '+b+' ');1,2,3
+        x.pop();
+		x.push(14)
+		document.write(' '+b+' ');1,2,14
+		document.write(' '+typeof(b)+' ');
+		document.write(' '+(b instanceof Object)+' ');
+
+         console.log("tufail".length);
+		 console.log("tufail \
+		 gulzar");
+		 console.log(`Tufail Gulzar`.charAt(3));
+		 console.log(`Tufail Gulzar`.charCodeAt(0));
+		 let str1 = "Tufail Gulzar";
+		 console.log(str1.slice(3,5));//ai
+		 console.log(str1.slice(-3,-1));//za
+		 console.log(str1.slice(3,-3));//ail Gul
+		 console.log(str1.slice(-9,8));//il G
+		 console.log(str1.slice(3));//ail Gulzar
+		 console.log(str1.slice(-3));//zar
+		 console.log(str1.slice(-3));//zar
+		 console.log(str1.slice(-3));//zar
+
+		 //here -ve is treated as 0
+		 console.log(str1.substring(1,3));//uf
+		 console.log(str1.substring(3));//ail ...
+		 console.log(str1.substring(-1,6));//uf
+
+		 console.log(str1.substr(3,3));//3 chars after pos 3
+		 console.log(str1.substr(-4,3));//3 chars after pos 4 from end
+
+
+
+		 console.log("   Tufail Gulzar   ".trimStart());//"Tufail Gulzar    "
+		 console.log("   Tufail Gulzar   ".trimEnd());//"      Tufail Gulzar"
+
+		 var arr = "My.name.is.Tufail.Gulzar".split('.');
+		 console.log(arr);
+		 console.log(arr.join(' '));//"My name is Tufail Gulzar"
+
+		 str1 += " tufail Tufail";
+		 console.log(str1.replace("Tufail","Zahid"));//replace ist Tufail with Zahid
+         console.log(str1.replace('tUfail',"Zahid"));//no change
+		 console.log(str1.replace(/tUfail/i,"Zahid"));//case insensetive
+		 console.log(str1.replace(/Tufail/g,"Zahid"));//replace all Tufail with Zahid
+		 console.log(str1.replace(/tUfAil/ig,"Zahid"));//case insensetive all
+
+		 console.log(str1.replaceAll(/tufail/g,'Zahid'));//g flag is must here
+
+		 console.log("2".padStart(5,"3"));//33332
+		 console.log("2".padEnd(5,"3"));//233333
+		 console.log("2".padStart(5));//    2
+		 console.log("2".padStart("3"));//33332
+
+		 console.log(`My Name is Tufail also written as Tufiel but it's actually TUFAIL Tufail`.match(/ail/ig));//array of 3 ail,AIL ail
+		 console.log(Array.from(`My Name is Tufail also written as Tufiel but it's actually TUFAIL Tufail`.matchAll(/ail/ig)));//returns iterator array of arrays
+
+		 console.log(`My name is Tufail tufail`.search(/Tufail/gi));//11
+		 console.log(`My name is Tufail Tufail`.indexOf("Tufail",13));//18
+		 console.log(`My name is Tufail Tufail`.lastIndexOf("Tufail"));//18
+
+		 console.log(`My name is Tufail`.includes('Tuf'));//true
+		 console.log(`My name is Tufail`.includes('tuf'));//false
+		 console.log(`My name is Tufail`.includes('Tuf',12));//false
+
+		 console.log(`My name is TUfail`.endsWith('fail'));//true
+		 console.log(`My name is TUfail`.endsWith('fail',13));//false
+
+		 console.log(`My name is TUfail`.startsWith('My'));//true
+		 console.log(`My name is TUfail`.startsWith('name'));//false
+
+
+
+
+
+	  </script>
+</body>
+</html>

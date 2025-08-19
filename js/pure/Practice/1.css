@@ -1,0 +1,94 @@
+h1{
+	text-align: center;
+	color: blue;
+}
+
+.stackContainer
+{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+	min-height: 50vh;
+	height: fit-content;
+	border: 10px solid;
+}
+
+.bucket1
+{
+	padding: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+  border: 10px solid green;
+  border-top: none;
+  margin-bottom: 20px;
+}
+
+.bucket2
+{
+	padding: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+  border: 10px solid red;
+  border-top: none;
+}
+
+.element{
+	margin: 0 0 3px 0;
+	border: 2px solid;
+}
+
+.BankScreen{
+	min-height: 50vh;
+	background-color: rgba(0, 0, 0, 0.616);
+	border-radius: 10px;
+	font-family: monospace;
+	color: white;
+	font-weight: bold;
+	font-size: xx-large;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+.progressContainer
+{
+	position:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border: 2px solid;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.progressBar
+{
+ position: absolute;
+ background-image: linear-gradient(180deg,blue,black,white,green,gold);
+ top: 0;
+ bottom: 0;
+ left: 0;
+ min-height: 100%;
+ width: 50%;
+ border-radius: 15px;
+}
+
+#moveImage{
+	position: relative;
+	left: 0;
+	bottom: 0;
+	border-radius: 10px;
+}

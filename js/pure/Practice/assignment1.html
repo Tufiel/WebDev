@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 1</title>
+	<link rel="stylesheet" href="1.css">
+</head>
+<body>
+	<h1>Password Validator</h1>
+	<input type="text" placeholder="Password" class="validatePassword">
+	<input type="text" placeholder="Confirm Password" class="validatePassword">
+	<button onclick="validatePassword()">check</button>
+	<p class="validatePassword"></p>
+
+	<h1>Calculator</h1>
+	<input type="number" placeholder="first number" class="calculator">
+	<select class="calculator">
+		<option value="Add">Add</option>
+		<option value="Subtract">Subtract</option>
+		<option value="Multiply">Multiply</option>
+		<option value="Divide">Divide</option>
+		<option value="Reminder">Reminder</option>
+		<option value="Power">Power</option>
+	</select>
+	<input type="number" placeholder="second number" class="calculator">
+	<button onclick="calculator()">Result</button>
+	<p class="calculator"></p>
+
+	<h1>Color Mixer</h1>
+	<input type="text" placeholder="Color 1" class="colorMixer">
+	<input type="text" placeholder="Color 2" class="colorMixer">
+	<button onclick="colorMixer()">Get color</button>
+	<p class="colorMixer"></p>
+
+	<h1>Duplicate List</h1>
+
+		<ul class="duplicateList">
+			
+		</ul>
+	
+	<input type="text" placeholder="Name" class="duplicateList">
+	<button onclick="addToDuplicateList()">Add</button>
+	<button onclick="removeDuplicatesFromList()">remove duplicates</button>
+	
+	<h1>Inverted Right Angled Triangle</h1>
+	<input type="number" placeholder="rows" class="invertedTriangle">
+	<button onclick="invertedTriangle()">print</button>
+	<p class="invertedTriangle"></p>
+
+	<h1>Divisible by 3 but not by 2</h1>
+	<input type="text" placeholder="12,34,63" class="divisibleTest">
+	<button onclick="divisibleTest()">Result</button>
+	<p class="divisibleTest"></p>
+
+	<h1>Banking System</h1>
+     <div class="BankScreen">
+     
+	 </div>
+	 <input type="text" placeholder="Account Number" class="Bank"> &nbsp;&nbsp;&nbsp;&nbsp;
+	 <input type="text" placeholder="Amount" class="Bank">&nbsp;&nbsp;&nbsp;&nbsp;
+	 <input type="text" placeholder="Name" class="Bank"><br><br>
+	<button onclick="AddAccount()">Add New Account</button>
+	<button onclick="PrintAllAccounts()">Print All Accounts</button>
+	<button onclick="Deposite()">Deposite Cash</button>
+	<button onclick="Withdraw()">Withdraw Cash</button>
+	<button onclick="CheckBalance()">Check Balance</button>
+	<button onclick="UpdateData()">Home</button>
+
+	<h1 id="headingChange" onclick="ToggleHeading()">My name is Tufail click here</h1>
+	
+	<h1>Validate Form</h1>
+	<form onsubmit="return ValidateForm()">
+      <input type="text" placeholder="Email" class="validateForm">
+	  <b class="validateForm"></b><br><br>
+	  <input type="text" placeholder="Password" class="validateForm">
+	  <b class="validateForm"></b><br><br>
+	  <input type="submit" value="Login">
+	</form>
+	<p class="validateForm"></p>
+
+
+	<h1>Progress bar</h1>
+	<div class="progress progressContainer">
+		<div class="progress progressBar"></div>
+	</div>
+
+	<h1>Background Color</h1>
+	<button id="backgroundColor">Change Background</button>
+
+	<h1>Text highlight if word chars>= <span id="putChars"></span></h1> <input type="number" placeholder="enter a number" id="highlightChars"> <button onclick="highlightLongWords()">Highlight</button>
+	<p id="highlight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nihil autem consequatur iure necessitatibus fuga eos accusamus at. Nobis ratione eveniet reiciendis et nisi. Porro, repellendus. Quisquam, porro esse. Ea pariatur quas, possimus consequatur expedita ullam, quasi aliquam aut quae adipisci itaque ex sit sunt voluptatibus. Dolorem est facilis vero labore commodi ab ad voluptatem optio, nihil, corrupti ducimus praesentium sapiente ex ipsa nesciunt dolorum voluptas saepe et sint minima deserunt molestias pariatur cupiditate enim? Ipsam nam hic ipsa voluptate blanditiis sequi assumenda unde a labore minus eius, omnis cum natus maxime. Neque repudiandae ducimus eos fugiat quis aspernatur! Cum consequuntur, aperiam dignissimos vitae excepturi maxime repudiandae placeat fugit eum laborum? Natus optio ad nisi. Fugiat itaque iste error ipsam, natus accusantium dolorum unde placeat numquam eos fugit nostrum! Ipsa doloribus harum voluptas aspernatur quasi! Ad molestiae cupiditate dignissimos quas quod suscipit temporibus, quia explicabo voluptas pariatur sequi in, illum soluta nobis sint repellendus natus? Quia illo odio animi illum fugiat, ratione non deleniti, debitis voluptate sunt voluptas quod, nostrum consequuntur recusandae molestias hic perspiciatis cum placeat? Iusto cumque ipsum hic totam alias, aspernatur eius quis debitis nisi rem eos voluptate sapiente magni molestiae, quidem cum nam praesentium voluptas nihil distinctio ducimus similique nemo? Praesentium, ab delectus ut accusantium suscipit consequuntur iure nam molestiae tenetur! Earum necessitatibus vel quae harum ipsum ex distinctio nulla, quisquam repellat perspiciatis alias culpa mollitia veritatis, consequuntur odit amet nisi voluptates? Deserunt aut commodi quidem libero voluptatum dolor nam totam alias repudiandae repellendus fugit provident cupiditate necessitatibus inventore odio quos adipisci odit quibusdam, nisi obcaecati impedit. Voluptate aut quaerat eum ut magni. Deleniti quod sit hic praesentium, itaque, cum vitae voluptate consequatur est possimus ipsa sapiente neque nobis. Iste voluptatibus asperiores corrupti facilis. Libero iure iusto doloremque quibusdam nulla, illum earum expedita animi odit sed!</p>
+     
+	<h1>Move image press up,down,left,right keys</h1>
+	<img src="./../../bootstrap/portfolio/me.jpg" alt="img" id="moveImage" width="500">
+
+     <h1 id="reverseWithDelay">Reversing String after 2 seconds</h1>
+
+	 <h1>Random number will be generated after  <span id="randTime"></span> seconds Number: <span id="randNum"></span> </h1>
+
+	 <h1>press arrow keys</h1>
+	 <img src="./../../bootstrap/portfolio/me.jpg" alt="img" height="100" id="resizeImage">
+
+	<script src="assignment1.js"></script>
+</body>
+</html>

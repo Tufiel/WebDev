@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="container" id="mainContainer">
+      <br />
+      <div id="errorContainer" class="hidden">
+		<b style="text-align: center" id="error"></b>
+	  </div>
+      <br />
+
+      <div class="subContainer " id="inputForm">
+        <input class="quizInfo" type="text" placeholder="Name of Institute" />
+        <input
+          class="quizInfo"
+          type="number"
+          placeholder="Number of Questions"
+        />
+        <input
+          class="quizInfo"
+          type="number"
+          placeholder="Time for each question in seconds"
+        />
+        <button id="quizInfo">Enter Questions</button>
+      </div>
+
+      <div class="subContainer hidden" id="questionsInput"></div>
+
+      <div class="subContainer hidden" id="reviewForm"></div>
+
+      <div class="subContainer hidden" id="startExam" >
+		<div id="testQuestion">
+			<h2>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				 Doloribus assumenda laudantium voluptas cupiditate nam 
+				 quaerat rerum porro blanditiis, possimus impedit!
+			</h2>
+      <hr>
+			<div id="Options">
+				<div><label for="op1" id="op1"></label> &nbsp;<input type="radio" name="optionSelected" value="1"></div>
+				<div><label for="op2" id="op2"></label> &nbsp;<input type="radio" name="optionSelected" value="2"></div>
+				<div><label for="op3" id="op3"></label> &nbsp;<input type="radio" name="optionSelected" value="3"></div>
+				<div><label for="op4" id="op4"></label> &nbsp;<input type="radio" name="optionSelected" value="4"></div>
+			</div>
+
+			<div id="TimeBar">
+				<div id="TimeEscaped"></div>
+			</div>
+
+			<h1 id="countDown"></h1>
+		</div>
+		<button onclick="nextQuestion()" id="nextQuestion">Next</button>
+	  </div>
+
+       <div class="subContainer hidden" id="Result">
+		
+	   </div>
+
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
