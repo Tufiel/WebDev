@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid 1</title>
+	<style>
+		.container{
+			display: grid;
+			width: 748px;
+			height: 748px;
+			background-color: #000;
+			grid:414px 130px 155px auto/320px 198px 153px 50px;
+			gap:9px;
+		}
+
+		.item{
+			border: 1px blue;
+		}
+		#div1{
+			background-color: red;
+		}
+		#div2
+		{
+			background-color: #F0F1EC;			grid-column:span 3;
+		}
+		#div3{
+			background-color: #F0F1EC;			grid-row: span 2;
+		}
+
+		#div4{
+			background-color: #F0F1EC;			grid-row:span 2;
+			grid-column: span 2;
+		}
+		#div5{
+			background-color: navy ;
+			border-bottom: 10px solid ;
+		}
+		#div6{
+			background-color: #F0F1EC;			grid-row: span 2;
+		}
+		#div7{
+			background-color: #F0F1EC;
+		}
+		#div8{
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item" id="div1"></div>
+		<div class="item" id="div2"></div>
+		<div class="item" id="div3"></div>
+		<div class="item" id="div4"></div>
+		<div class="item" id="div5"></div>
+		<div class="item" id="div6"></div>
+		<div class="item" id="div7"></div>
+		<div class="item" id="div8"></div>
+		<div class="item" id="div9"></div>
+		
+	</div>
+</body>
+</html>
