@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Display Position</title>
+	<style>
+		.box1
+		{
+			position: relative;
+			left: 100px;
+			margin: auto;
+			height: 140px;
+			width: 140px;
+		    display: inline-block;
+		}
+		.container1
+		{
+			font-weight: bolder;
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 5px;
+			display: inline-block;
+		}
+
+		#container1
+		{
+			top: 0;
+			background-color: orange;
+		}
+
+		#container2
+		{
+			background-color: antiquewhite;
+			top: 10px;
+			left: 10px;
+		}
+
+		#container3
+		{
+			background-color: aqua;
+			top: 20px;
+			left: 20px;
+		}
+
+		#container4
+		{
+			background-color: blue;
+			top: 30px;
+			left: 30px;
+		}
+
+		#container5
+		{
+			background-color: brown;
+			top: 40px;
+			left: 40px;
+		}
+		
+		.box1:hover  .container1 {
+			transition: all 500ms;
+			top: 0 !important;
+			left: 0 !important;
+			text-align: center;
+		}
+
+		.box2
+		{
+			position: relative;
+			border: 2px solid;
+		}
+
+		.container2
+		{
+			position: absolute;
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+			border-radius: 10px;
+		}
+
+		#container21
+		{
+			background-color: yellowgreen;
+		}
+
+		#container22
+		{
+			background-color: yellow;
+		}
+
+		#container23
+		{
+			background-color: rgb(65, 112, 156);
+		}
+
+		#container24
+		{
+			background-color: violet;
+		}
+
+		#container25
+		{
+			background-color: rgb(10, 10, 10);
+		}
+
+		.box2:hover .container2
+		{
+			
+			background-color: bisque;
+			position: absolute;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>This is position property of css</h1>
+	<div class="box1">
+		<div class="container1" id="container1">1</div>
+		<div class="container1" id="container2">2</div>
+		<div class="container1" id="container3">3</div>
+		<div class="container1" id="container4">4</div>
+		<div class="container1" id="container5">5</div>
+	</div>
+	
+	<div class="box2">
+		<div class="container2" id="container21">1</div>
+		<div class="container2" id="container22">2</div>
+		<div class="container2" id="container23">3</div>
+		<div class="container2" id="container24">4</div>
+		<div class="container2" id="container25">5</div>
+	</div>
+
+<!-- ABSOLUTE IS AS COMPARISON TO IT'S ANCISTOR WITH POSITION PROPERTY -->
+
+</body>
+</html>
