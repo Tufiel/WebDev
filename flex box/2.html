@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX BOX 2</title>
+	<link rel="stylesheet" href="default.css" >
+
+	<style>
+		
+		.container{
+			border: 1px dashed black;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: flex-end;
+		}
+		.children{
+			flex:0 0 50px;
+            color: white;
+			font-size: large;
+			padding: 10px;
+			text-align: center;
+			border-top-right-radius: 10%;
+			border-top-left-radius: 10%;
+			flex:0 0 20px;
+			transition: all 500ms;
+		}
+		
+		/* .lang
+		{
+			animation: updown 1s infinite linear;
+
+		} */
+
+		@keyframes updown
+		{
+			10%
+			{
+				transform: translateY(-50px);
+			}
+		}
+
+		#level
+		{
+			align-self: flex-start;
+			height: 100%;
+		}
+
+
+		
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="children" id="level">
+			100 <br><br>90 <br><br> 80 <br><br> 70 <br><br> 60 <br><br> 50 <br><br> 40 <br><br> 30 <br><br> 20 <br><br> 10<br><br>0 <br><br>
+		</div>
+		<div class="children lang" id="div1">C</div>
+		<div class="children lang" id="div2">CPP</div>
+		<div class="children lang" id="div3">JAVA</div>
+		<div class="children lang" id="div4">HTML</div>
+		<div class="children lang" id="div5">CSS</div>
+		<div class="children lang" id="div6">JS</div>
+		<div class="children lang" id="div7">PHP</div>
+
+	</div>
+<br><br>
+	<div class="form">
+		<label for="C">C:</label>
+		<input type="number" name="C" id="C" >
+		<br><br>
+		<label for="CPP">CPP:</label>
+		<input type="number" name="CPP" id="CPP">
+		<br><br>
+		<label for="JAVA">JAVA:</label>
+		<input type="number" name="JAVA" id="JAVA">
+		<br><br>
+		<label for="HTML">HTML:</label>
+		<input type="number" name="HTML" id="HTML">
+		<br><br>
+		<label for="CSS">CSS:</label>
+		<input type="number" name="CSS" id="CSS">
+		<br><br>
+		<label for="JS">JS:</label>
+		<input type="number" name="JS" id="JS">
+		<br><br>
+		<label for="PHP">PHP:</label>
+		<input type="number" name="PHP" id="PHP">
+	</div>
+
+	<script>
+		const c = document.querySelector("#div1");
+		const cpp = document.querySelector("#div2");
+		const java = document.querySelector("#div3");
+		const html = document.querySelector("#div4");
+		const css = document.querySelector("#div5");
+		const js = document.querySelector("#div6");
+		const php = document.querySelector("#div7");
+		const cper = document.querySelector("#C");
+		const cppper = document.querySelector("#CPP");
+		const javaper = document.querySelector("#JAVA");
+		const htmlper = document.querySelector("#HTML");
+		const cssper = document.querySelector("#CSS");
+		const jsper = document.querySelector("#JS");
+		const phpper = document.querySelector("#PHP");
+
+
+		 cper.addEventListener('change',validatePercent);
+		 cppper.addEventListener('change',validatePercent);
+		 javaper.addEventListener('change',validatePercent);
+		 htmlper.addEventListener('change',validatePercent);
+		 cssper.addEventListener('change',validatePercent);
+		 jsper.addEventListener('change',validatePercent);
+		 phpper.addEventListener('change',validatePercent);
+
+		
+
+		
+		function grow(x,y)
+		{
+			
+			let len =  (Number(x.value))*4 + 50  ;
+			
+		
+			// console.log(len)
+				sety(y,50, len);
+				// console.log(temp);
+				// sleep(100);
+			
+		}
+
+		function sety(obj,start,end)
+		{
+			obj.style.height = start + "px";
+			start++;
+			console.log(start);
+			if(start < end)
+			setTimeout(() => {
+				sety(obj,start,end);
+			}, 10);
+		}
+
+		function sleep(ms)
+		{
+			const date = Date.now();
+			let cd = null;
+			do{
+				cd = Date.now();
+			}while(cd-date < ms);
+		}
+
+		
+
+		function validatePercent()
+		{
+			console.log("mouse out");
+          if(this.value >100 || this.value < 0)
+		    this.value=0;
+			grow(cper,c);
+			grow(cppper,cpp);
+			grow(javaper,java);
+			grow(htmlper,html);
+			grow(cssper,css);
+			grow(jsper,js);
+			grow(phpper,php);
+		}
+	
+
+	</script>
+</body>
+</html>

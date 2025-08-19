@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX 1</title>
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.container
+		{
+			display: inline-flex;
+			gap:0px 10px ;
+			border: 1px dashed black;
+			flex-flow: row wrap;
+			justify-content:center;
+			align-items: center;
+			height: 400px;
+			width: 100%;
+			text-align: center;
+			background-color: floralwhite;
+		}
+
+		.children
+		{
+			color: white;
+			font-size: xx-large;
+			padding: 10px;
+			/* width: 300px; */
+			flex:1 1 200px; /* grow shrink baisi*/
+		}
+
+		#div3
+		{
+			align-self: flex-start;
+			order: 0;
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+
+		#div2
+		{
+			flex-grow: 1;
+			order: 1;/*more less == more priority*/
+		}
+		#div4
+		{
+			align-self: flex-end;
+			order: 3;
+		}
+
+		#div1
+		{
+			align-self: flex-end;
+			order: 4;
+		}
+
+		#div5
+		{
+			order: 5;
+			flex-grow: 1;
+		}
+		@media (width<800px)
+		{
+			.container
+			{
+				flex-flow: wrap column-reverse;
+			    height: 200px;
+				width: 100%;
+			}
+
+			.children
+			{
+				flex:0 0 10px;
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="children" id="div1">1</div>
+		<div class="children" id="div2">2</div>
+		<div class="children" id="div3">3</div>
+		<div class="children" id="div4">4</div>
+		<div class="children" id="div5">5</div>
+	</div>
+	
+</body>
+</html>
