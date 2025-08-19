@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Registration</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Mega Menu Navigation -->
+	<nav class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li class="has-mega-menu">
+				<a href="#">Courses</a>
+				<div class="mega-menu">
+					<div class="mega-menu-column">
+						<h4>Science</h4>
+						<ul>
+							<li><a href="#">Physics</a></li>
+							<li><a href="#">Chemistry</a></li>
+							<li><a href="#">Biology</a></li>
+						</ul>
+					</div>
+					<div class="mega-menu-column">
+						<h4>Arts</h4>
+						<ul>
+							<li><a href="#">History</a></li>
+							<li><a href="#">Literature</a></li>
+							<li><a href="#">Philosophy</a></li>
+						</ul>
+					</div>
+					<div class="mega-menu-column">
+						<h4>Technology</h4>
+						<ul>
+							<li><a href="#">Computer Science</a></li>
+							<li><a href="#">Engineering</a></li>
+							<li><a href="#">Mathematics</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Student Registration Form -->
+	<div class="container">
+		<h2>Student Registration</h2>
+		<form id="registrationForm" novalidate>
+			<div class="form-group">
+				<label for="fullname">Full Name</label>
+				<input type="text" id="fullname" name="fullname" required>
+				<span class="error" id="fullnameError"></span>
+			</div>
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" id="email" name="email" required>
+				<span class="error" id="emailError"></span>
+			</div>
+			<div class="form-group">
+				<label for="dob">Date of Birth</label>
+				<input type="date" id="dob" name="dob" required>
+				<span class="error" id="dobError"></span>
+			</div>
+			<div class="form-group">
+				<label for="course">Select Course</label>
+				<select id="course" name="course" required>
+					<option value="">--Select--</option>
+					<option value="physics">Physics</option>
+					<option value="chemistry">Chemistry</option>
+					<option value="biology">Biology</option>
+					<option value="history">History</option>
+					<option value="literature">Literature</option>
+					<option value="philosophy">Philosophy</option>
+					<option value="computer-science">Computer Science</option>
+					<option value="engineering">Engineering</option>
+					<option value="mathematics">Mathematics</option>
+				</select>
+				<span class="error" id="courseError"></span>
+			</div>
+			<div class="form-group">
+				<label for="password">Create Password</label>
+				<input type="password" id="password" name="password" required>
+				<span class="error" id="passwordError"></span>
+			</div>
+			<button class="btn" type="submit">Register</button>
+			<div id="successMessage"></div>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

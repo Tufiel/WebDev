@@ -1,0 +1,563 @@
+/* Copyright © Tufiel Gulzar 2025 */
+* {
+	/* Copyright © Tufiel Gulzar 2025 */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+body {
+	/* Copyright © Tufiel Gulzar 2025 */
+	min-height: 100vh;
+	background: #18191a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #18191a;
+	z-index: 10;
+	position: relative;
+	/* Copyright © Tufiel Gulzar 2025 */
+	height: auto;
+}
+
+.login-form {
+	background: #232427;
+	border-radius: 24px;
+	box-shadow:
+		8px 8px 24px #141415,
+		-8px -8px 24px #292a2d,
+		inset 2px 2px 8px #18191a,
+		inset -2px -2px 8px #292a2d;
+	padding: 40px 32px;
+	min-width: 340px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Copyright © Tufiel Gulzar 2025 */
+	height: auto;
+}
+
+.login-form h2 {
+	color: #fff;
+	margin-bottom: 28px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	text-shadow: 1px 1px 2px #141415;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.input-group {
+	position: relative;
+	margin-bottom: 28px;
+	width: 100%;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.input-group input {
+	width: 100%;
+	padding: 14px 12px 14px 16px;
+	background: #232427;
+	border: none;
+	border-radius: 12px;
+	color: #fff;
+	font-size: 1rem;
+	box-shadow:
+		4px 4px 12px #18191a,
+		-4px -4px 12px #292a2d,
+		inset 1px 1px 4px #18191a,
+		inset -1px -1px 4px #292a2d;
+	outline: none;
+	transition: box-shadow 0.2s, background 0.2s;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.input-group input:focus {
+	background: #232427;
+	box-shadow:
+		0 0 0 2px #3a3b3c,
+		4px 4px 12px #18191a,
+		-4px -4px 12px #292a2d,
+		inset 1px 1px 4px #18191a,
+		inset -1px -1px 4px #292a2d;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.input-group label {
+	position: absolute;
+	left: 18px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #888;
+	font-size: 1rem;
+	pointer-events: none;
+	transition: 0.2s;
+	background: transparent;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+	top: 0;
+	left: 12px;
+	font-size: 0.85rem;
+	color: #bbb;
+	background: #232427;
+	padding: 0 4px;
+	transform: translateY(-50%) scale(0.95);
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 14px 0;
+	background: #232427;
+	color: #fff;
+	border: none;
+	border-radius: 12px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow:
+		4px 4px 12px #18191a,
+		-4px -4px 12px #292a2d,
+		inset 1px 1px 4px #18191a,
+		inset -1px -1px 4px #292a2d;
+	transition: box-shadow 0.2s, background 0.2s;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+button[type="submit"]:hover {
+	background: #1a1b1d;
+	box-shadow:
+		2px 2px 8px #18191a,
+		-2px -2px 8px #292a2d,
+		inset 1px 1px 4px #18191a,
+		inset -1px -1px 4px #292a2d;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+.error-message {
+	color: #ff4d4f;
+	margin-top: 18px;
+	font-size: 0.98rem;
+	min-height: 22px;
+	text-align: center;
+	letter-spacing: 1px;
+	/* Copyright © Tufiel Gulzar 2025 */
+}
+
+
+.eco-animal-body {
+	position: absolute;
+	bottom: 0;
+	left: 8px;
+	width: 22px;
+	height: 16px;
+	background: #bfa76f;
+	border-radius: 12px 16px 12px 16px/12px 16px 12px 16px;
+}
+.eco-animal-head {
+	position: absolute;
+	top: -10px;
+	left: 18px;
+	width: 14px;
+	height: 14px;
+	background: #bfa76f;
+	border-radius: 50%;
+}
+.eco-animal-ear {
+	position: absolute;
+	top: -14px;
+	width: 6px;
+	height: 10px;
+	background: #bfa76f;
+	border-radius: 50%;
+}
+.eco-animal-ear.left { left: 18px; }
+.eco-animal-ear.right { left: 24px; }
+@keyframes animal-hop {
+	0%, 100% { bottom: 14%; }
+	10% { bottom: 18%; }
+	20% { bottom: 14%; }
+	30% { bottom: 18%; }
+	40% { bottom: 14%; }
+}
+
+.eco-tree {
+	position: absolute;
+	bottom: 28%;
+	left: 80%;
+	width: 40px;
+	height: 90px;
+	z-index: 3;
+}
+.eco-tree-trunk {
+	position: absolute;
+	bottom: 0;
+	left: 16px;
+	width: 8px;
+	height: 40px;
+	background: #8d5524;
+	border-radius: 4px;
+}
+.eco-tree-leaves {
+	position: absolute;
+	bottom: 28px;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background: radial-gradient(circle at 20px 20px, #4caf50 60%, #388e3c 100%);
+	border-radius: 50%;
+}
+
+.eco-bird {
+	position: absolute;
+	top: 18%;
+	left: 10%;
+	width: 32px;
+	height: 18px;
+	z-index: 5;
+	animation: bird-fly 10s linear infinite;
+}
+.eco-bird-body {
+	position: absolute;
+	top: 6px;
+	left: 8px;
+	width: 16px;
+	height: 8px;
+	background: #fff;
+	border-radius: 8px 12px 8px 12px/8px 12px 8px 12px;
+}
+.eco-bird-wing {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 8px;
+	background: #e0e0e0;
+	border-radius: 8px 12px 8px 12px/8px 12px 8px 12px;
+	transform: rotate(-20deg);
+	animation: bird-wing 0.7s infinite alternate;
+}
+@keyframes bird-fly {
+	0% { left: 10%; top: 18%; }
+	50% { left: 80%; top: 10%; }
+	100% { left: 10%; top: 18%; }
+}
+@keyframes bird-wing {
+	0% { transform: rotate(-20deg);}
+	100% { transform: rotate(20deg);}
+}
+
+.eco-boy2 {
+	position: absolute;
+	bottom: 18%;
+	left: 20%;
+	width: 38px;
+	height: 80px;
+	z-index: 4;
+	animation: boy2-play 7s linear infinite;
+}
+.eco-boy2 .body {
+	position: absolute;
+	bottom: 0;
+	left: 12px;
+	width: 14px;
+	height: 38px;
+	background: #f9d29d;
+	border-radius: 8px;
+}
+.eco-boy2 .head {
+	position: absolute;
+	top: -24px;
+	left: 7px;
+	width: 24px;
+	height: 24px;
+	background: #f9d29d;
+	border-radius: 50%;
+	border: 2px solid #e2b07a;
+}
+.eco-boy2 .ball {
+	position: absolute;
+	bottom: 0;
+	left: 28px;
+	width: 14px;
+	height: 14px;
+	background: #f44336;
+	border-radius: 50%;
+	animation: ball-bounce 1.2s infinite;
+}
+@keyframes boy2-play {
+	0% { left: 20%; }
+	50% { left: 30%; }
+	100% { left: 20%; }
+}
+@keyframes ball-bounce {
+	0%, 100% { bottom: 0; }
+	50% { bottom: 18px; }
+}
+
+.login-form {
+	z-index: 10;
+	position: relative;
+}
+.container {
+	z-index: 10;
+	position: relative;
+}
+
+/* --- ADVANCED ECOSYSTEM GRAPHICS --- */
+.ecosystem {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* Road */
+.eco-road {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 80px;
+	background: #444;
+	z-index: 2;
+	box-shadow: 0 0 20px #0008;
+}
+.eco-road-mark {
+	position: absolute;
+	bottom: 36px;
+	left: 0;
+	width: 100vw;
+	height: 8px;
+	background: repeating-linear-gradient(90deg, #fff 0 40px, transparent 40px 80px);
+	opacity: 0.7;
+	z-index: 3;
+}
+
+/* Car (SVG for realism) */
+.eco-car-real {
+	position: absolute;
+	bottom: 30px;
+	left: 10vw;
+	width: 120px;
+	height: 60px;
+	z-index: 4;
+	animation: car-real-move 10s linear infinite;
+}
+@keyframes car-real-move {
+	0% { left: -140px; }
+	100% { left: 110vw; }
+}
+
+/* Tree (SVG) */
+.eco-tree-real {
+	position: absolute;
+	bottom: 80px;
+	left: 20vw;
+	width: 60px;
+	height: 120px;
+	z-index: 3;
+}
+.eco-tree-real2 {
+	left: 60vw;
+}
+
+/* Human (SVG) */
+.eco-human {
+	position: absolute;
+	bottom: 80px;
+	left: 35vw;
+	width: 40px;
+	height: 90px;
+	z-index: 4;
+	animation: human-walk 7s linear infinite;
+}
+@keyframes human-walk {
+	0% { left: 35vw; }
+	50% { left: 50vw; }
+	100% { left: 35vw; }
+}
+
+/* Cow */
+.eco-cow {
+	position: absolute;
+	bottom: 90px;
+	left: 10vw;
+	width: 70px;
+	height: 50px;
+	z-index: 4;
+	animation: cow-move 12s linear infinite;
+}
+@keyframes cow-move {
+	0% { left: 10vw; }
+	50% { left: 70vw; }
+	100% { left: 10vw; }
+}
+
+/* Monkey */
+.eco-monkey {
+	position: absolute;
+	bottom: 160px;
+	left: 60vw;
+	width: 40px;
+	height: 60px;
+	z-index: 5;
+	animation: monkey-swing 6s ease-in-out infinite;
+}
+@keyframes monkey-swing {
+	0%,100% { transform: rotate(-10deg) translateY(0); }
+	50% { transform: rotate(10deg) translateY(-30px); }
+}
+
+/* Students (group) */
+.eco-students {
+	position: absolute;
+	bottom: 80px;
+	left: 75vw;
+	width: 120px;
+	height: 80px;
+	z-index: 4;
+	display: flex;
+	gap: 8px;
+}
+.eco-student {
+	width: 28px;
+	height: 60px;
+	background: linear-gradient(#ffe082 60%, #1976d2 100%);
+	border-radius: 10px 10px 16px 16px/18px 18px 16px 16px;
+	position: relative;
+}
+.eco-student-head {
+	width: 20px;
+	height: 20px;
+	background: #f9d29d;
+	border-radius: 50%;
+	position: absolute;
+	top: -18px;
+	left: 4px;
+	border: 2px solid #e2b07a;
+}
+
+/* Cow SVG details */
+.eco-cow svg,
+.eco-monkey svg,
+.eco-human svg,
+.eco-car-real svg,
+.eco-tree-real svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.eco-plane-banner {
+	position: absolute;
+	top: 12vh;
+	left: -440px;
+	width: fit-content;
+	min-width: 420px;
+	height: 120px;
+	z-index: 5; /* Lower than .container (z-index: 10) */
+	animation: plane-banner-fly 18s linear infinite;
+	pointer-events: none;
+}
+@keyframes plane-banner-fly {
+	0% { left: -440px; top: 12vh; }
+	40% { left: 30vw; top: 8vh; }
+	60% { left: 60vw; top: 16vh; }
+	100% { left: 110vw; top: 12vh; }
+}
+
+.dev-info-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(24,25,26,0.92);
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dev-info-board {
+	background: #fffde7;
+	border-radius: 24px;
+	box-shadow: 0 8px 32px #1976d2aa, 0 2px 8px #232427;
+	padding: 32px 32px 24px 32px;
+	display: flex;
+	align-items: flex-end;
+	gap: 32px;
+	position: relative;
+}
+.dev-man {
+	width: 80px;
+	height: 120px;
+	display: flex;
+	align-items: flex-end;
+}
+.dev-board {
+	position: relative;
+	width: 340px;
+	height: 180px;
+	margin-left: 8px;
+}
+.dev-board-text {
+	position: absolute;
+	top: 24px;
+	left: 24px;
+	width: 290px;
+	max-height: 120px;
+	min-height: 80px;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	font-size: 1.08rem;
+	color: #1976d2;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+	white-space: pre-line;
+	z-index: 2;
+	overflow-y: auto;
+	scrollbar-width: thin;
+}
+.dev-board-text::-webkit-scrollbar {
+	width: 6px;
+	background: #e3e3e3;
+}
+.dev-board-text::-webkit-scrollbar-thumb {
+	background: #b0bec5;
+	border-radius: 4px;
+}
+.dev-close-btn {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: #1976d2;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 6px 18px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0 2px 8px #1976d2aa;
+	transition: background 0.2s;
+	z-index: 3;
+}
+.dev-close-btn:hover {
+	background: #0d47a1;
+}
